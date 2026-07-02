@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Health Services CareRight Guide</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+*{
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    margin:20px;
+    background-color:#ffffff;
+}
+
+.topnav{
+    overflow:hidden;
+    background-color:#e77a15;
+    border-radius:6px;
+}
+
+.topnav a{
+    display:block;
+    color:#f2f2f2;
+    text-align:center;
+    padding:14px 16px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.topnav a:hover{
+    background-color:#ddd;
+    color:black;
+}
+
+.otml{
+    background-color:transparent;
+    float:left;
+}
+
+.otml:hover{
+    background-color:#141414;
+}
+
+.content{
+    background-color:#f5f5f5;
+    min-height:650px;
+    padding:20px;
+    margin-top:10px;
+    border-radius:6px;
+}
+
+#page-home-title{
+    font-size:32px;
+    text-align:center;
+    color:#e77a15;
+    font-weight:bold;
+    margin-bottom:30px;
+}
+
+.sidebar{
+    background-color:#e77a15;
+    padding:20px;
+    width:220px;
+    min-height:450px;
+    float:left;
+    border-radius:6px;
+}
+
+.sidebar h4{
+    color:white;
+    margin-bottom:20px;
+}
+
+.sidebar a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    padding:10px 0;
+    border-bottom:1px solid rgba(255,255,255,0.3);
+}
+
+.sidebar a:hover{
+    color:#000;
+}
+
+.main-content{
+    margin-left:250px;
+    padding:10px 20px;
+}
+
+.coming-soon{
+    background:#ffffff;
+    padding:30px;
+    border-left:6px solid #e77a15;
+    border-radius:6px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom:25px;
+}
+
+.coming-soon h1{
+    color:#e77a15;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.info-card{
+    background:#ffffff;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:6px;
+    box-shadow:0 2px 5px rgba(0,0,0,0.08);
+}
+
+.info-card h3{
+    color:#e77a15;
+    margin-bottom:15px;
+}
+
+.footer{
+    background-color:#f1f1f1;
+    padding:15px;
+    text-align:center;
+    margin-top:10px;
+    border-radius:6px;
+}
+
+.alert-box{
+    background:#fff3cd;
+    border:1px solid #ffe69c;
+    padding:15px;
+    border-radius:6px;
+}
+
+@media screen and (max-width:768px){
+
+    .sidebar{
+        width:100%;
+        min-height:auto;
+        float:none;
+        margin-bottom:20px;
+    }
+
+    .main-content{
+        margin-left:0;
+    }
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<div class="topnav">
+
+    <a href="#" style="float:right;">NEWS</a>
+    <a href="#" style="float:right;">RESOURCE</a>
+    <a href="#" style="float:right;">HOME</a>
+
+    <a class="otml">
+        <img src="data:image/png;base64,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"
+        style="width:70px;" alt="Logo">
+    </a>
+
+</div>
+
+<!-- Content -->
+<div class="content">
+
+    <div id="page-home-title">
+        Health Services CareRight Guide
+    </div>
+
+    <div class="sidebar">
+        <h4>Quick Access</h4>
+        <a href="#">Clinic Information</a>
+        <a href="#">Healthcare Resources</a>
+        <a href="#">How to Access Care</a>
+        <a href="#">Health Education</a>
+        <a href="#">Contact Directory</a>
+    </div>
+
+    <div class="main-content">
+
+        <div class="coming-soon">
+            <h1>🚧 COMING SOON 🚧</h1>
+            <p>
+                Welcome to the Health Services CareRight Guide Portal.
+                This platform is currently under development and will soon
+                become your central source for healthcare information,
+                clinic services, patient guidance, and wellness resources.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h3>What You Will Find Here</h3>
+            <ul>
+                <li>Clinic locations and service information</li>
+                <li>Operating hours and contact details</li>
+                <li>Patient care guides and FAQs</li>
+                <li>Wellness and preventive health resources</li>
+                <li>Emergency and urgent care information</li>
+                <li>Occupational health and employee health services</li>
+            </ul>
+        </div>
+
+        <div class="info-card">
+            <h3>Participating Clinics</h3>
+            <p>
+                Information regarding available health facilities,
+                healthcare programs, specialist services, and support
+  y to make information
+                easy to locate. Users will be able to browse health topics,
+                download patient information sheets, view clinic directories,
+                and access service-specific guidance.
+            </p>
+        </div>
+
+        <div class="alert-box">
+            <strong>Notice:</strong> Full access to resources, clinic guides,
+            downloadable documents, healthcare contacts, and support information
+            will be available in a future release.
+        </div>
+
+    </div>
+
+    <div style="clear:both;"></div>
+
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <p>
+        © 2026 Health Services CareRight Guide |
+        Healthcare Resources & Information Portal
+    </p>
+</div>
+
+</body>
+</html>
